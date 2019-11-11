@@ -15,57 +15,182 @@ public class LoanMasterDetails {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "lmd_id")
 	private int loanMasterDetailsId;
-	
-	@Column(name = "cust_id")
 	private String customerId;
-	
-	@Column(name = "tenure")
 	private int tenure;
-	
-	@Column(name = "loan_amount")
 	private Double loanAmount;
 	
 	@Column(name = "roi")
 	private Double rateOfInterest;
 	
-	@Column(name = "emi")
 	private Double emi;
 	
-	@Column(name = "actual_emi")
 	private Double actualEmi; 
 	
-	@Column(name = "second_year_insurance")
 	private String secondYearInsurance;
 	
-	@Column(name = "advance_emi")
 	private Double advanceEmi;
 	
-	@Column(name = "processing_fees")
 	private Double processingFees;
 	
-	@Column(name = "paid_to_delear")
 	private Double paidToDelear;
 	
-	@Column(name = "paid_to_mf")
 	private Double paidToMf;
 	
-	@Column(name = "verified_by_cm")
 	private String verifiedByCm;
 	
-	@Column(name = "created_by")
 	private String createdBy;
 	
-	@Column(name = "created_date")
 	private String createdDate;
 	
-	@Column(name = "sanction_letter_generation_date")
 	private String sanctionLetterGeneratinDate;
 	
-	@Column(name = "document_updload")
 	private String documentUpload;
 	
-	@Column(name = "document_received_date")
 	private String documentRecievedDate;
+
+	public int getLoanMasterDetailsId() {
+		return loanMasterDetailsId;
+	}
+
+	public void setLoanMasterDetailsId(int loanMasterDetailsId) {
+		this.loanMasterDetailsId = loanMasterDetailsId;
+	}
+
+	public String getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
+	}
+
+	public int getTenure() {
+		return tenure;
+	}
+
+	public void setTenure(int tenure) {
+		this.tenure = tenure;
+	}
+
+	public Double getLoanAmount() {
+		return loanAmount;
+	}
+
+	public void setLoanAmount(Double loanAmount) {
+		this.loanAmount = loanAmount;
+	}
+
+	public Double getRateOfInterest() {
+		return rateOfInterest;
+	}
+
+	public void setRateOfInterest(Double rateOfInterest) {
+		this.rateOfInterest = rateOfInterest;
+	}
+
+	public Double getEmi() {
+		return emi;
+	}
+
+	public void setEmi(Double emi) {
+		this.emi = emi;
+	}
+
+	public Double getActualEmi() {
+		return actualEmi;
+	}
+
+	public void setActualEmi(Double actualEmi) {
+		this.actualEmi = actualEmi;
+	}
+
+	public String getSecondYearInsurance() {
+		return secondYearInsurance;
+	}
+
+	public void setSecondYearInsurance(String secondYearInsurance) {
+		this.secondYearInsurance = secondYearInsurance;
+	}
+
+	public Double getAdvanceEmi() {
+		return advanceEmi;
+	}
+
+	public void setAdvanceEmi(Double advanceEmi) {
+		this.advanceEmi = advanceEmi;
+	}
+
+	public Double getProcessingFees() {
+		return processingFees;
+	}
+
+	public void setProcessingFees(Double processingFees) {
+		this.processingFees = processingFees;
+	}
+
+	public Double getPaidToDelear() {
+		return paidToDelear;
+	}
+
+	public void setPaidToDelear(Double paidToDelear) {
+		this.paidToDelear = paidToDelear;
+	}
+
+	public Double getPaidToMf() {
+		return paidToMf;
+	}
+
+	public void setPaidToMf(Double paidToMf) {
+		this.paidToMf = paidToMf;
+	}
+
+	public String getVerifiedByCm() {
+		return verifiedByCm;
+	}
+
+	public void setVerifiedByCm(String verifiedByCm) {
+		this.verifiedByCm = verifiedByCm;
+	}
+
+	public String getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+
+	public String getCreatedDate() {
+		return createdDate;
+	}
+
+	public void setCreatedDate(String createdDate) {
+		this.createdDate = createdDate;
+	}
+
+	public String getSanctionLetterGeneratinDate() {
+		return sanctionLetterGeneratinDate;
+	}
+
+	public void setSanctionLetterGeneratinDate(String sanctionLetterGeneratinDate) {
+		this.sanctionLetterGeneratinDate = sanctionLetterGeneratinDate;
+	}
+
+	public String getDocumentUpload() {
+		return documentUpload;
+	}
+
+	public void setDocumentUpload(String documentUpload) {
+		this.documentUpload = documentUpload;
+	}
+
+	public String getDocumentRecievedDate() {
+		return documentRecievedDate;
+	}
+
+	public void setDocumentRecievedDate(String documentRecievedDate) {
+		this.documentRecievedDate = documentRecievedDate;
+	}
 	
 	
 

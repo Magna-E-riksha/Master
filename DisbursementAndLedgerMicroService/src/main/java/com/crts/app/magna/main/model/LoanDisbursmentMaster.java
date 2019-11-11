@@ -15,33 +15,101 @@ public class LoanDisbursmentMaster {
 	@Column(name = "ldm_id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int loanDisbursementMasterId;
-	
-	@Column(name = "case_no")
 	private String caseNumber;
-	
-	@Column(name = "amount_pay_type")
 	private String amountPayType;
-	
-	@Column(name = "total_amount")
 	private Double totalAmount;
-	
+
 	@Column(name = "mf_ac_number")
 	private Long mangaFinanceaccountNumber;
 	
 	@Column(name = "mf_ifsc_code")
 	private String magnaFinanceIFSCCode;
-	
-	@Column(name = "account_type")
 	private String accountType;
-	
-	@Column(name = "transfer_amount")
 	private Double transferAmount;
 	
 	@Column(name = "status")
 	private String paymentStatus;
-	
-	@Column(name = "amount_paid_date")
 	private String amountPaidDate;
+
+	public int getLoanDisbursementMasterId() {
+		return loanDisbursementMasterId;
+	}
+
+	public void setLoanDisbursementMasterId(int loanDisbursementMasterId) {
+		this.loanDisbursementMasterId = loanDisbursementMasterId;
+	}
+
+	public String getCaseNumber() {
+		return caseNumber;
+	}
+
+	public void setCaseNumber(String caseNumber) {
+		this.caseNumber = caseNumber;
+	}
+
+	public String getAmountPayType() {
+		return amountPayType;
+	}
+
+	public void setAmountPayType(String amountPayType) {
+		this.amountPayType = amountPayType;
+	}
+
+	public Double getTotalAmount() {
+		return totalAmount;
+	}
+
+	public void setTotalAmount(Double totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+
+	public Long getMangaFinanceaccountNumber() {
+		return mangaFinanceaccountNumber;
+	}
+
+	public void setMangaFinanceaccountNumber(Long mangaFinanceaccountNumber) {
+		this.mangaFinanceaccountNumber = mangaFinanceaccountNumber;
+	}
+
+	public String getMagnaFinanceIFSCCode() {
+		return magnaFinanceIFSCCode;
+	}
+
+	public void setMagnaFinanceIFSCCode(String magnaFinanceIFSCCode) {
+		this.magnaFinanceIFSCCode = magnaFinanceIFSCCode;
+	}
+
+	public String getAccountType() {
+		return accountType;
+	}
+
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
+	}
+
+	public Double getTransferAmount() {
+		return transferAmount;
+	}
+
+	public void setTransferAmount(Double transferAmount) {
+		this.transferAmount = transferAmount;
+	}
+
+	public String getPaymentStatus() {
+		return paymentStatus;
+	}
+
+	public void setPaymentStatus(String paymentStatus) {
+		this.paymentStatus = paymentStatus;
+	}
+
+	public String getAmountPaidDate() {
+		return amountPaidDate;
+	}
+
+	public void setAmountPaidDate(String amountPaidDate) {
+		this.amountPaidDate = amountPaidDate;
+	}
 	
 	
 

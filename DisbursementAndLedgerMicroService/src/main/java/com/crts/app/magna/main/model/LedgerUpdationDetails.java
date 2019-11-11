@@ -22,20 +22,71 @@ public class LedgerUpdationDetails {
 	private String ledgerDetailsId;
 	
 	//need to get from mf_ledger_details table
-	@Column(name ="case_no")
 	private String caseNumber;
 	
-	@Column(name ="emi_paid_date")
 	private String emiPaidDate;
 	
-	@Column(name ="emi_paid_amount")
 	private Double emiPaidAmount;
 	
-	@Column (name = "bucket")
 	private int bucket;
 	
-	@Column(name ="total_emi_paid")
-	private Double totalEmiPaid; 
+	private Double totalEmiPaid;
+
+	public int getLedgerUpdationDetailsId() {
+		return ledgerUpdationDetailsId;
+	}
+
+	public void setLedgerUpdationDetailsId(int ledgerUpdationDetailsId) {
+		this.ledgerUpdationDetailsId = ledgerUpdationDetailsId;
+	}
+
+	public String getLedgerDetailsId() {
+		return ledgerDetailsId;
+	}
+
+	public void setLedgerDetailsId(String ledgerDetailsId) {
+		this.ledgerDetailsId = ledgerDetailsId;
+	}
+
+	public String getCaseNumber() {
+		return caseNumber;
+	}
+
+	public void setCaseNumber(String caseNumber) {
+		this.caseNumber = caseNumber;
+	}
+
+	public String getEmiPaidDate() {
+		return emiPaidDate;
+	}
+
+	public void setEmiPaidDate(String emiPaidDate) {
+		this.emiPaidDate = emiPaidDate;
+	}
+
+	public Double getEmiPaidAmount() {
+		return emiPaidAmount;
+	}
+
+	public void setEmiPaidAmount(Double emiPaidAmount) {
+		this.emiPaidAmount = emiPaidAmount;
+	}
+
+	public int getBucket() {
+		return bucket;
+	}
+
+	public void setBucket(int bucket) {
+		this.bucket = bucket;
+	}
+
+	public Double getTotalEmiPaid() {
+		return totalEmiPaid;
+	}
+
+	public void setTotalEmiPaid(Double totalEmiPaid) {
+		this.totalEmiPaid = totalEmiPaid;
+	} 
 	
 	
 	
