@@ -1,74 +1,41 @@
-package com.crts.app.magna.main.model;
+package com.crts.app.magna.main.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "mf_loanDisbursmentDetails")
-public class LoanDisbursmentDetails {
+public class DTOLoanDisbursmentDetailsAllFields {
 	
-	//primary key
-	@Id
-	@Column(name = "ld_id")
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int loanDisbursmentId;
-	
-	//foreign key
-	@Column(name = "loan_master")
 	private int loanMasterDetailsId;
-
-	// Generate according to branch
-	@Column(name = "case_no")
 	private String caseNumber;
-	
-	//foreign key
-	@Column(name = "vd_id")
 	private String vehicleDetailsId;
-	
 	private Double paidToDelearAmount;
-	
 	private Double loanAmount;
-	
 	private int tenure;
 	private Double emi;
-	
-	public int getLoanMasterDetailsId() {
-		return loanMasterDetailsId;
-	}
-
-	public void setLoanMasterDetailsId(int loanMasterDetailsId) {
-		this.loanMasterDetailsId = loanMasterDetailsId;
-	}
-
-	public Double getAdvanceEmi() {
-		return advanceEmi;
-	}
-
-	public void setAdvanceEmi(Double advanceEmi) {
-		this.advanceEmi = advanceEmi;
-	}
-
-	public Double getEmi() {
-		return emi;
-	}
-
-	public void setEmi(Double emi) {
-		this.emi = emi;
-	}
-
 	private Double advanceEmi;
-	
-	
 	private Double actualEmi;
-	
-	//account head id
 	private String disbursementBy;
-	
 	private String disbursementDate;
+	
+	public DTOLoanDisbursmentDetailsAllFields() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public DTOLoanDisbursmentDetailsAllFields(int loanDisbursmentId, int loanMasterDetailsId, String caseNumber,
+			String vehicleDetailsId, Double paidToDelearAmount, Double loanAmount, int tenure, Double emi,
+			Double advanceEmi, Double actualEmi, String disbursementBy, String disbursementDate) {
+		super();
+		this.loanDisbursmentId = loanDisbursmentId;
+		this.loanMasterDetailsId = loanMasterDetailsId;
+		this.caseNumber = caseNumber;
+		this.vehicleDetailsId = vehicleDetailsId;
+		this.paidToDelearAmount = paidToDelearAmount;
+		this.loanAmount = loanAmount;
+		this.tenure = tenure;
+		this.emi = emi;
+		this.advanceEmi = advanceEmi;
+		this.actualEmi = actualEmi;
+		this.disbursementBy = disbursementBy;
+		this.disbursementDate = disbursementDate;
+	}
 
 	public int getLoanDisbursmentId() {
 		return loanDisbursmentId;
@@ -78,6 +45,13 @@ public class LoanDisbursmentDetails {
 		this.loanDisbursmentId = loanDisbursmentId;
 	}
 
+	public int getLoanMasterDetailsId() {
+		return loanMasterDetailsId;
+	}
+
+	public void setLoanMasterDetailsId(int loanMasterDetailsId) {
+		this.loanMasterDetailsId = loanMasterDetailsId;
+	}
 
 	public String getCaseNumber() {
 		return caseNumber;
@@ -119,6 +93,22 @@ public class LoanDisbursmentDetails {
 		this.tenure = tenure;
 	}
 
+	public Double getEmi() {
+		return emi;
+	}
+
+	public void setEmi(Double emi) {
+		this.emi = emi;
+	}
+
+	public Double getAdvanceEmi() {
+		return advanceEmi;
+	}
+
+	public void setAdvanceEmi(Double advanceEmi) {
+		this.advanceEmi = advanceEmi;
+	}
+
 	public Double getActualEmi() {
 		return actualEmi;
 	}
@@ -143,5 +133,6 @@ public class LoanDisbursmentDetails {
 		this.disbursementDate = disbursementDate;
 	}
 	
-
+	
 }
+

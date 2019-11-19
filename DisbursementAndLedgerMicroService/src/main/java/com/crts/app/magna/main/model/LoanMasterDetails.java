@@ -15,6 +15,15 @@ public class LoanMasterDetails {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "lmd_id")
 	private int loanMasterDetailsId;
+	private String vehicleDetailsId;
+	public String getVehicleDetailsId() {
+		return vehicleDetailsId;
+	}
+
+	public void setVehicleDetailsId(String vehicleDetailsId) {
+		this.vehicleDetailsId = vehicleDetailsId;
+	}
+
 	private String customerId;
 	private int tenure;
 	private Double loanAmount;

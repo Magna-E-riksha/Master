@@ -18,7 +18,7 @@ public class LoanDisbursmentMaster {
 	private String caseNumber;
 	private String amountPayType;
 	private Double totalAmount;
-
+	private String bankName;
 	@Column(name = "mf_ac_number")
 	private Long mangaFinanceaccountNumber;
 	
@@ -37,6 +37,14 @@ public class LoanDisbursmentMaster {
 
 	public void setLoanDisbursementMasterId(int loanDisbursementMasterId) {
 		this.loanDisbursementMasterId = loanDisbursementMasterId;
+	}
+
+	public String getBankName() {
+		return bankName;
+	}
+
+	public void setBankName(String bankName) {
+		this.bankName = bankName;
 	}
 
 	public String getCaseNumber() {
