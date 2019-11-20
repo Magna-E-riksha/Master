@@ -1,0 +1,27 @@
+<p>
+  acdashboard works!
+</p>
+<div class="container" align="center" style="border-inline-width: 1"  >
+  <h3 style="text-underline-position: below;">##### EMI Payment #####</h3><br>
+
+<br><br>
+caseNumber:
+<input type="text" placeholder="case Number" [(ngModel)]="dumyCaseNumber" ><br><br>
+
+<button (click)="checkCaseNumber(dumyCaseNumber)">Process for Emi Payment</button>
+</div>
+
+<div >
+
+  case Number:
+  <input type="text" placeholder="case Number" [(ngModel)]="dumyCaseNumber" ><br><br>
+  EMI Amount:
+  <input type="text" placeholder="EMI Amount" [(ngModel)]="emiAmount" ><br><br>
+  EMI Paid Amount:
+  <input type="text" placeholder="EMI Amount" [(ngModel)]="emiPiadAmount" ><br><br>
+  EMI Paid Date:
+  <input type="text" [disabled]="isDisabled" placeholder="EMi Paid Date Auto Generated"  ><br><br>
+
+  <button (click)="SubmitEmi(dumyCaseNumber,emiAmount,emiLastDate,emiPiadAmount)">Process for Emi Payment</button>
+  
+</div>

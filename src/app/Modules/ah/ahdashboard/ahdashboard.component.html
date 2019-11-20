@@ -1,0 +1,213 @@
+<p>
+  ahdashboard works!
+</p>
+<h3>Rasmhi</h3>
+<div class = "container" align="center" style="border-inline-width: 2" *ngIf="islmDetails; else Hide">
+  <h3> Data from Loan master Details (Login by Login Head) </h3>
+<table class="table table-striped" border="1" align="center" >
+  <tbody>
+    <tr>
+    <td> Loan Disbursment Details Id </td>
+    <!-- <td> case Number </td> -->
+    <td> Tenure </td>
+    <td> Loan Amount </td>
+    <td> vehicle Details Id </td>
+    <td> Actual Emi </td>
+    <td> Paid To Delear Amount </td>
+   <!-- / <td> Disbursment by </td> -->
+    <!-- <td> Disbursment Date </td> -->
+    <td> Select </td>
+    <td> Update </td>
+    <td> Process for Disbursement </td>
+    
+  </tr>
+  
+    <tr *ngFor = "let data of lmDetails">
+      <td> {{data.loanMasterDetailsId}}</td>
+      <!-- <td> {{data.caseNumber}}</td> -->
+      <td> {{data.tenure}}</td>
+      <td> {{data.loanAmount}}</td>
+      <td> {{data.vehicleDetailsId}}</td>
+      <td> {{data.actualEmi}}</td>
+      <td> {{data.paidToDelear}}</td>
+      <!-- <td> {{data.disbursementBy}}</td> -->
+      <!-- <td> {{data.disbursementDate}}</td> -->
+      <td><button (click) = "viewData(this.data)">View</button>  </td>
+      <td><button (click) = "update(this.data)">Update</button>  </td>
+      <td><button (click) = "processForDisbursment(this.data)">Process For Diseberment</button>  </td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #Hide>
+  <p>show this only if "show" is not true </p>
+</ng-template>
+</div>
+   
+      
+     <div *ngIf="isview; else Hide"> 
+        
+          
+           
+          Loan Master Details Id : <input type="number" [(ngModel)]="shared.lmd.loanMasterDetailsId"><br><br>
+          Vehicle Details Id : <input type="text" [(ngModel)]="shared.lmd.vehicleDetailsId"><br><br>
+          Customer Id : <input type="text" [(ngModel)]="shared.lmd.customerId"><br><br>
+          Tenure : <input type="text" [(ngModel)]="shared.lmd.tenure"><br><br>
+          Loan Amount : <input type="text" [(ngModel)]="shared.lmd.loanAmount"><br><br>
+          Rate Of Interest : <input type="text" [(ngModel)]="shared.lmd.rateOfInterest"><br><br>
+          EMi : <input type="text" [(ngModel)]="shared.lmd.emi"><br><br>
+          Actual Emi : <input type="text" [(ngModel)]="shared.lmd.actualEmi"><br><br>
+          Second Year Insurance : <input type="text" [(ngModel)]="shared.lmd.secondYearInsurance"><br><br>
+          Advance EMI : <input type="text" [(ngModel)]="shared.lmd.advanceEmi"><br><br>
+          Processing Fees : <input type="text" [(ngModel)]="shared.lmd.processingFees"><br><br>
+          Paid To Delear : <input type="text" [(ngModel)]="shared.lmd.paidToDelear"><br><br>
+          Paid To Mf : <input type="text" [(ngModel)]="shared.lmd.paidToMf"><br><br>
+          Verified By Cm : <input type="text" [(ngModel)]="shared.lmd.verifiedByCm"><br><br>
+          Created By : <input type="text" [(ngModel)]="shared.lmd.createdBy"><br><br>
+          Created Date : <input type="text" [(ngModel)]="shared.lmd.createdDate"><br><br>
+          Sanction Letter Generatin Date : <input type="text" [(ngModel)]="shared.lmd.sanctionLetterGeneratinDate"><br><br>
+          Document Upload : <input type="text" [(ngModel)]="shared.lmd.documentUpload"><br><br>
+          Document Recieved Date : <input type="text" [(ngModel)]="shared.lmd.documentRecievedDate"><br><br>
+          <button (click) = "closeView()" >Close</button>
+      
+      </div>
+
+      <div *ngIf="isupdate; else Hide">
+        
+        PaidToDelear (Amount to be paid): <input type="number" [(ngModel)]="shared.lmd.paidToDelear">><br><br>
+        
+       Dealar Balance Amount: <input type="number" [(ngModel)]="pendingAmount"><br><br>
+
+       <button (click) = "submitUpdatedData(pendingAmount)" >Update</button><br><br>
+       
+      </div> 
+      
+   
+
+
+
+
+
+
+
+
+
+<h4>Nilesh</h4>
+
+<div class="container" align="center" style="border-inline-width: 1"  *ngIf="isHide; else Hide"><br>
+  <h3>Loan Disbursment Details !!!</h3><br>
+  <table class="table table-striped" border="2" align="center">
+          <tbody align="center">
+      <tr>
+          <!-- <td>Select</td> -->
+          <td>Loan Disbusrment ID</td>
+          <td>Loan Master Details ID</td>
+          <td>Case Number</td>
+          <!-- <td>Vehicle Details Id</td>
+          <td>Paid To Dealer Amount</td> -->
+          <td>Loan Amount</td>
+          <td>Tenure</td>
+          <td>EMI</td>
+          <td>Advance EMI</td>
+          <td>Actual Emi</td>
+          <td>Disburse By</td>
+          <td>Disbursment Date</td>
+          <td>Action</td>
+      </tr>
+      <tr *ngFor="let lddetail of lddetails">
+  
+              
+              <td > {{lddetail.loanDisbursmentId}}</td>
+              <td> {{lddetail.loanMasterDetailsId}}</td>
+              <td> {{lddetail.caseNumber}}</td>
+              <!-- <td> {{lddetail.vehicleDetailsId}}</td>
+              <td> {{lddetail.paidToDelearAmount}}</td> -->
+              <td> {{lddetail.loanAmount}}</td>
+              <td> {{lddetail.tenure}}</td>
+              <td> {{lddetail.emi}}</td>
+              <td> {{lddetail.advanceEmi}}</td>
+              <td> {{lddetail.actualEmi}}</td>
+              <td> {{lddetail.disbursementBy}}</td>
+              <td> {{lddetail.disbursementDate}}</td>
+      <td>       <button (click)="processForDisbursmentPayment(lddetail)">Process For Payment </button>
+       </td> 
+      </tr>
+      </tbody>
+  </table>
+   
+  <ng-template #Hide>
+    <p>
+      Show this only if "show" is not true
+    </p>
+  </ng-template> 
+</div>
+<br>
+
+<div class="container" align="center" style="border-inline-width: 1" *ngIf="isFormHide; else Hide">
+  <h3 style="text-underline-position: below;">##### Loan Disbursment Master #####</h3><br>
+
+<br><br>
+caseNumber:
+<input type="text" placeholder="case Number" [(ngModel)]="lddcaseNumber" ><br><br>
+Amount Pay Type:
+  <select name="Payment Mode"  [(ngModel)]="ldmaster.amountPayType">
+    <option value="NEFT">NEFT</option>
+    <option value="RTGS">RTGS</option>
+    <option value="IMPS">IMPS</option>
+  </select>
+<br><br>
+Total Amount: <!--   Amount to be pay to delear -->
+<input type="number" placeholder="Total Amount" [(ngModel)]="lddloanAmount" ><br><br>
+
+MF Acount Number:
+<input type="text" placeholder="MF Acount Number" [(ngModel)]="ldmaster.mangaFinanceaccountNumber" ><br><br>
+MF Bank Name:
+<input type="text" placeholder="bankName" [(ngModel)]="ldmaster.bankName" ><br><br>
+MF IFSC:
+<input type="text" placeholder="MF IFSC" [(ngModel)]="ldmaster.magnaFinanceIFSCCode" ><br><br>
+MF Acount Type:
+<select name="AcountType" [(ngModel)]="ldmaster.accountType" aria-placeholder="select acount type">
+  <option value="Saving">Saving Account</option>
+  <option value="Current">Current Acount</option>
+</select>
+  <br><br>
+Transfer Amount:
+<input type="number" placeholder="Transfer Amount" [(ngModel)]="lddpaidToDelearAmount" ><br><br>
+Paid Status:
+<input type="text" placeholder="Paid Status" [(ngModel)]="ldmaster.paymentStatus" ><br><br>
+Amount Paid Date:
+<input type="text" placeholder="Amount Paid Date" [(ngModel)]="ldmaster.amountPaidDate" ><br><br>
+
+<button (click)="SubmitLoanDisbursment(ldmaster)">Submit Payment</button>
+
+<ng-template #Hide>
+    <p>
+      Show this only if "show" is not true
+    </p>
+  </ng-template> 
+</div>
+
+
+
+ <!-- <div >
+  <button (click)="getsingledata()">show data</button>
+  <form class="example-form">
+      <input  placeholder="user" [(ngModel)]="lddetail.paidToDelearAmount">
+    <mat-form-field class="example-full-width">
+    
+      <input  placeholder="user" [(ngModel)]="amout">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Leave a comment"></textarea>
+    </mat-form-field>
+  </form>
+
+</div>  -->
+
+  
+
+
+
+
+

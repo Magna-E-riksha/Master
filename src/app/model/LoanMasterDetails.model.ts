@@ -1,0 +1,22 @@
+export class LoanMasterDetails
+{
+    loanMasterDetailsId:number;
+    vehicleDetailsId:string;
+    customerId:string;
+    tenure:number;
+    loanAmount:number;
+    rateOfInterest:number;
+    emi:number;
+    actualEmi:number;
+    secondYearInsurance:string;
+    advanceEmi:number;
+    processingFees:number;
+    paidToDelear:number;
+    paidToMf:number;
+    verifiedByCm:string;
+    createdBy:string;
+    createdDate:string;
+    sanctionLetterGeneratinDate:string;
+    documentUpload:string;
+    documentRecievedDate:string;
+}
